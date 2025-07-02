@@ -1,0 +1,35 @@
+// schemas/earthquake.proto
+syntax = "proto3";
+
+package earthquake;
+
+message EarthquakeEvent {
+    string id = 1;
+    double magnitude = 2;
+    string place = 3;
+    int64 timestamp = 4;
+    double longitude = 5;
+    double latitude = 6;
+    double depth = 7;
+    string mag_type = 8;
+    int32 nst = 9;
+    double gap = 10;
+    double dmin = 11;
+    double rms = 12;
+    string net = 13;
+    string updated = 14;
+    string tz = 15;
+    string url = 16;
+    string detail = 17;
+    int32 felt = 18;
+    double cdi = 19;
+    double mmi = 20;
+    string alert = 21;
+    string status = 22;
+    int32 tsunami = 23;
+    int32 sig = 24;
+    string ids = 25;
+    string sources = 26;
+    string types = 27;
+    string event_type = 28;
+}
