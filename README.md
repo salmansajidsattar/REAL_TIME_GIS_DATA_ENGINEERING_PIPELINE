@@ -28,3 +28,24 @@ This project demonstrates a complete real-time GIS data pipeline using:
    
    # Deploy the pipeline
    ./deploy.sh
+
+# Start infrastructure
+docker-compose up -d
+
+# Wait for services (30 seconds)
+sleep 30
+
+# Setup database
+python src/database/db_setup.py
+
+# Start producer (in terminal 1)
+python src/producer/earthquake_producer.py
+
+# Start consumer (in terminal 2)
+python src/consumer/spark_consumer.py
+
+# Start dashboard (in terminal 3)
+python src/visualization/dashboard.py
+
+Access Dashboard:
+Open http://localhost:8050 in your browser
